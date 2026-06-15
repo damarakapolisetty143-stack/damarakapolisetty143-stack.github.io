@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Damaraka Polisetty | Sales Operations &amp; Commercial Strategy</title>
+<meta name="description" content="Sales Operations & Commercial Strategy professional. Forecasting, P&L, business performance & insights across the UK and India." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#16243B;
+    --ink-soft:#42536E;
+    --paper:#F8F7F3;
+    --paper-2:#FFFFFF;
+    --line:#E4E0D6;
+    --line-ink:#2C3D58;
+    --accent:#126E63;
+    --accent-soft:#E6F0ED;
+    --display:'Space Grotesk',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    font-family:var(--body);
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:18px;
+  }
+  h2.sec{
+    font-family:var(--display);font-weight:700;font-size:clamp(1.7rem,3.6vw,2.5rem);
+    line-height:1.1;letter-spacing:-.02em;margin-bottom:14px;
+  }
+  .sec-intro{color:var(--ink-soft);max-width:60ch;margin-bottom:44px}
+
+  /* NAV */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(248,247,243,.86);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-family:var(--display);font-weight:700;letter-spacing:-.01em;font-size:1.02rem}
+  .brand span{color:var(--accent)}
+  .nav-links{display:flex;gap:26px}
+  .nav-links a{font-size:.86rem;color:var(--ink-soft);transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-toggle{display:none;font-family:var(--mono);font-size:.8rem;background:none;border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer;color:var(--ink)}
+  @media(max-width:760px){
+    .nav-links{display:none}
+    .nav-toggle{display:block}
+  }
+
+  /* HERO — statement header */
+  .hero{background:var(--ink);color:var(--paper);padding:84px 0 0}
+  .hero .role{font-family:var(--mono);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#7FB8AE;margin-bottom:22px}
+  .hero h1{
+    font-family:var(--display);font-weight:700;
+    font-size:clamp(2.4rem,6.4vw,4.2rem);line-height:1.02;letter-spacing:-.03em;
+    margin-bottom:20px;
+  }
+  .hero .pos{
+    font-family:var(--display);font-weight:500;
+    font-size:clamp(1.05rem,2.4vw,1.5rem);color:#C9D3E2;line-height:1.3;margin-bottom:18px;
+  }
+  .hero .pos b{color:#fff;font-weight:600}
+  .hero .lede{max-width:56ch;color:#A9B4C6;margin-bottom:34px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px}
+  .btn{
+    font-family:var(--body);font-size:.92rem;font-weight:500;
+    padding:13px 24px;border-radius:8px;transition:transform .15s,background .2s,border-color .2s;
+    display:inline-block;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:#15806f}
+  .btn-ghost{border:1px solid var(--line-ink);color:#D8DFEA}
+  .btn-ghost:hover{border-color:#577093}
+
+  /* statement table of metrics = signature */
+  .statement{
+    border-top:1px solid var(--line-ink);
+    display:grid;grid-template-columns:repeat(4,1fr);
+  }
+  .stat{padding:26px 22px 30px;border-right:1px solid var(--line-ink)}
+  .stat:last-child{border-right:none}
+  .stat .v{font-family:var(--mono);font-weight:500;font-size:clamp(1.5rem,3.4vw,2.2rem);color:#fff;letter-spacing:-.01em}
+  .stat .k{font-size:.76rem;color:#8A98AE;margin-top:6px;letter-spacing:.02em}
+  @media(max-width:760px){
+    .statement{grid-template-columns:repeat(2,1fr)}
+    .stat:nth-child(2){border-right:none}
+    .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line-ink)}
+  }
+
+  section{padding:76px 0}
+  .section-alt{background:var(--paper-2)}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:54px;align-items:start}
+  .about-grid p{margin-bottom:16px;color:var(--ink-soft)}
+  .about-grid p b{color:var(--ink);font-weight:600}
+  .facts{border:1px solid var(--line);border-radius:12px;padding:24px;background:var(--paper)}
+  .facts .frow{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+  .facts .frow:last-child{border-bottom:none}
+  .facts .fk{color:var(--ink-soft)}
+  .facts .fv{font-weight:500;text-align:right}
+  @media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:30px}}
+
+  /* SKILLS */
+  .skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .skill-card{border:1px solid var(--line);border-radius:12px;padding:22px 24px;background:var(--paper-2);transition:border-color .2s,transform .2s}
+  .skill-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .skill-card.lead{border-color:var(--accent);background:var(--accent-soft)}
+  .skill-card h3{font-family:var(--display);font-weight:600;font-size:1.02rem;margin-bottom:12px;display:flex;align-items:center;gap:9px}
+  .skill-card .idx{font-family:var(--mono);font-size:.72rem;color:var(--accent)}
+  .tags{display:flex;flex-wrap:wrap;gap:7px}
+  .tag{font-size:.78rem;color:var(--ink-soft);background:var(--paper);border:1px solid var(--line);border-radius:99px;padding:4px 11px}
+  .skill-card.lead .tag{background:#fff;border-color:#CDE3DD}
+  .tag.learning{background:var(--accent-soft);border:1px dashed var(--accent);color:#0c5246}
+  .tag.learning::before{content:"◷ ";font-size:.8em}
+  @media(max-width:760px){.skill-grid{grid-template-columns:1fr}}
+
+  /* EXPERIENCE */
+  .xp{border-left:2px solid var(--line);padding-left:0}
+  .job{position:relative;padding:0 0 44px 30px;border-left:2px solid var(--line);margin-left:4px}
+  .job:last-child{border-left-color:transparent;padding-bottom:0}
+  .job::before{content:"";position:absolute;left:-7px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--paper)}
+  .job.muted::before{background:var(--line);}
+  .job .date{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;color:var(--ink-soft);text-transform:uppercase}
+  .job h3{font-family:var(--display);font-weight:600;font-size:1.18rem;margin:6px 0 2px}
+  .job .org{color:var(--accent);font-weight:500;font-size:.95rem;margin-bottom:4px}
+  .job .scope{font-size:.85rem;color:var(--ink-soft);font-style:italic;margin-bottom:14px}
+  .job ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .job li{position:relative;padding-left:18px;color:var(--ink-soft);font-size:.93rem}
+  .job li::before{content:"";position:absolute;left:0;top:10px;width:5px;height:5px;background:var(--accent);border-radius:1px}
+  .job li b{color:var(--ink);font-weight:600}
+
+  /* PROJECTS */
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .proj{border:1px solid var(--line);border-radius:12px;padding:24px;background:var(--paper-2);display:flex;flex-direction:column}
+  .proj .idx{font-family:var(--mono);font-size:.74rem;color:var(--accent);margin-bottom:12px}
+  .proj h3{font-family:var(--display);font-weight:600;font-size:1.06rem;margin-bottom:12px;line-height:1.2}
+  .proj ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:16px;flex:1}
+  .proj li{font-size:.86rem;color:var(--ink-soft);padding-left:14px;position:relative}
+  .proj li::before{content:"";position:absolute;left:0;top:9px;width:4px;height:4px;background:var(--accent);border-radius:50%}
+  .proj .ptags{display:flex;flex-wrap:wrap;gap:6px}
+  .proj .ptags span{font-size:.72rem;color:var(--ink-soft);border:1px solid var(--line);border-radius:99px;padding:3px 9px}
+  @media(max-width:920px){.proj-grid{grid-template-columns:1fr}}
+
+  /* EDUCATION */
+  .edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .edu{border:1px solid var(--line);border-radius:12px;padding:24px;background:var(--paper-2)}
+  .edu .yr{font-family:var(--mono);font-size:.78rem;color:var(--accent);margin-bottom:8px}
+  .edu h3{font-family:var(--display);font-weight:600;font-size:1.05rem;margin-bottom:4px}
+  .edu p{color:var(--ink-soft);font-size:.9rem}
+  @media(max-width:760px){.edu-grid{grid-template-columns:1fr}}
+
+  /* CONTACT */
+  .contact{background:var(--ink);color:var(--paper)}
+  .contact .eyebrow{color:#7FB8AE}
+  .contact h2.sec{color:#fff}
+  .contact .sec-intro{color:#A9B4C6}
+  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+  .cc{border:1px solid var(--line-ink);border-radius:12px;padding:22px;transition:border-color .2s}
+  .cc:hover{border-color:var(--accent)}
+  .cc .ck{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:#8A98AE;margin-bottom:8px}
+  .cc .cv{font-size:.95rem;font-weight:500;color:#fff;word-break:break-word}
+  @media(max-width:760px){.contact-grid{grid-template-columns:1fr}}
+
+  footer{background:var(--ink);color:#7C889C;border-top:1px solid var(--line-ink);padding:28px 0;font-size:.8rem;text-align:center}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">Damaraka <span>Polisetty</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">Menu</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="role">Sales Operations · Commercial Strategy · Strategy &amp; Operations</div>
+    <h1>Damaraka Polisetty</h1>
+    <p class="pos"><b>Sales Operations &amp; Commercial Strategy</b> — Forecasting · P&amp;L · Business Performance &amp; Insights · Power&nbsp;BI</p>
+    <p class="lede">Six years across the UK and India turning operational data into decisions leadership can act on — owning weekly forecasting, P&amp;L performance, and the readouts that drive commercial decisions.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#experience">View experience</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="statement">
+      <div class="stat"><div class="v num">6+</div><div class="k">Years of experience</div></div>
+      <div class="stat"><div class="v num">£1.2M+</div><div class="k">Business exposure managed</div></div>
+      <div class="stat"><div class="v num">£420K+</div><div class="k">Incremental revenue</div></div>
+      <div class="stat"><div class="v num">18</div><div class="k">Locations forecasted</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow reveal">About</div>
+    <h2 class="sec reveal">Business operator who runs on the numbers.</h2>
+    <div class="about-grid">
+      <div class="reveal">
+        <p>I'm a sales operations and commercial strategy professional with <b>6+ years across the UK and India</b>, turning operational data into decisions leadership can act on.</p>
+        <p>As departmental lead at <b>Barburrito (London)</b>, I reported directly to the CEO and owned <b>weekly forecasting and P&amp;L performance across 18 locations</b> — building forecasts for sales, labour, food, and consumables in <b>Power BI</b>, and delivering the weekly readouts that drove commercial decisions.</p>
+        <p>As founder of a multi-brand cloud kitchen, I carried <b>end-to-end P&amp;L ownership</b>, took operations from breakeven to profit in six months, and cut procurement costs 22% across 8+ vendors.</p>
+        <p>Across my career: <b>£1.2M+ business exposure</b>, <b>£420K+ incremental revenue</b>, and 40% YoY growth — plus recruiting and building the teams behind the numbers. I now work with AI tools (Claude, ChatGPT) to speed up analysis and reporting.</p>
+        <p>Open to roles in <b>Sales Operations, Commercial Strategy, and Strategy &amp; Operations</b>.</p>
+      </div>
+      <div class="facts reveal">
+        <div class="frow"><span class="fk">Focus</span><span class="fv">Sales Ops &amp; Strategy</span></div>
+        <div class="frow"><span class="fk">Markets</span><span class="fv">UK &amp; India</span></div>
+        <div class="frow"><span class="fk">Core tools</span><span class="fv">Power BI · Oracle</span></div>
+        <div class="frow"><span class="fk">Location</span><span class="fv">Vijayawada, India</span></div>
+        <div class="frow"><span class="fk">Languages</span><span class="fv">English · Telugu · Hindi</span></div>
+        <div class="frow"><span class="fk">Status</span><span class="fv">Open to work</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section-alt">
+  <div class="wrap">
+    <div class="eyebrow reveal">Core competencies</div>
+    <h2 class="sec reveal">Skills &amp; expertise</h2>
+    <p class="sec-intro reveal">Ordered by what I lead with — forecasting and commercial strategy first, supporting capabilities after.</p>
+    <div class="skill-grid">
+      <div class="skill-card lead reveal">
+        <h3><span class="idx">01</span> Sales Operations &amp; Forecasting</h3>
+        <div class="tags">
+          <span class="tag">Weekly Forecasting</span><span class="tag">Sales / Labour / Food / Consumables</span><span class="tag">Budget &amp; Variance</span><span class="tag">Business Performance &amp; Insights</span><span class="tag">Executive Reporting</span>
+        </div>
+      </div>
+      <div class="skill-card lead reveal">
+        <h3><span class="idx">02</span> Commercial Strategy</h3>
+        <div class="tags">
+          <span class="tag">Go-to-Market</span><span class="tag">Channel Optimization</span><span class="tag">Commercial Planning</span><span class="tag">Profitability Improvement</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3><span class="idx">03</span> P&amp;L &amp; Financial Management</h3>
+        <div class="tags">
+          <span class="tag">P&amp;L Ownership</span><span class="tag">Budgeting</span><span class="tag">Margin Analysis</span><span class="tag">Cost Control</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3><span class="idx">04</span> Tools &amp; Analytics</h3>
+        <div class="tags">
+          <span class="tag">Power BI</span><span class="tag">Oracle (ERP / Reporting)</span><span class="tag">Salesforce</span><span class="tag">HubSpot</span><span class="tag">Excel</span><span class="tag">Google Workspace</span><span class="tag learning">SQL &amp; Looker Studio — actively upskilling</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3><span class="idx">05</span> Procurement</h3>
+        <div class="tags">
+          <span class="tag">Supplier Negotiation</span><span class="tag">Consolidation</span><span class="tag">Cost Reduction</span><span class="tag">Inventory Control</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3><span class="idx">06</span> Business Development</h3>
+        <div class="tags">
+          <span class="tag">B2B Partnerships</span><span class="tag">Client Acquisition</span><span class="tag">Stakeholder Management</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3><span class="idx">07</span> Hiring &amp; Recruitment</h3>
+        <div class="tags">
+          <span class="tag">Manager Recruitment</span><span class="tag">Interviewing</span><span class="tag">Onboarding</span><span class="tag">Team Building</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3><span class="idx">08</span> AI &amp; Automation</h3>
+        <div class="tags">
+          <span class="tag">Claude</span><span class="tag">ChatGPT</span><span class="tag">Prompt Engineering</span><span class="tag">AI-Assisted Analysis</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="eyebrow reveal">Career history</div>
+    <h2 class="sec reveal">Professional experience</h2>
+    <p class="sec-intro reveal">Forecasting and P&amp;L ownership lead each role — the way the work actually ran.</p>
+
+    <div class="xp">
+      <div class="job reveal">
+        <div class="date">May 2024 – Apr 2026</div>
+        <h3>Senior Business Development Manager</h3>
+        <div class="org">Barburrito (TRG Concessions) · London, UK</div>
+        <div class="scope">Departmental lead — reporting directly to the CEO</div>
+        <ul>
+          <li>Reported directly to the CEO as operational lead, owning <b>weekly forecasting and P&amp;L performance across 18 locations</b>.</li>
+          <li>Built weekly forecasts in <b>Power BI</b> spanning <b>sales, staff/labour usage, food cost, and consumables</b> — surfacing margin and cost signals for early action.</li>
+          <li>Delivered <b>weekly performance readouts and budget insights</b> to executive leadership, turning operational data into commercial decisions.</li>
+          <li>Drove <b>40% YoY revenue growth</b> and <b>£420K+ incremental GMV</b> through channel optimization and commercial planning.</li>
+          <li>Renegotiated delivery-platform agreements (<b>12–15% cost reduction</b>) and led supplier consolidation delivering <b>£95K annual procurement savings</b>.</li>
+          <li>Grew flagship location revenue from <b>£1.1M to £1.38M</b> annually through operational improvements.</li>
+          <li>Led <b>recruitment, interviewing, and onboarding of location managers</b>, building teams aligned to operational needs.</li>
+        </ul>
+      </div>
+
+      <div class="job reveal">
+        <div class="date">Jan 2024 – Present</div>
+        <h3>Founder &amp; Managing Director</h3>
+        <div class="org">Onnuri Cloud Kitchen · London, UK</div>
+        <div class="scope">End-to-end P&amp;L ownership across multi-brand operations</div>
+        <ul>
+          <li>Owned a <b>£250K+ annual P&amp;L</b>, accelerating from breakeven to profitability within six months.</li>
+          <li>Founded and scaled a multi-brand cloud kitchen across Deliveroo, Uber Eats, Just Eat, and FoodHub, reaching <b>£180K+ GMV</b> in year one.</li>
+          <li>Led supplier negotiations across <b>8+ vendor partnerships</b>, delivering <b>22% procurement cost reduction</b> and a 32% gross-margin improvement.</li>
+          <li>Built and mentored a <b>12-member cross-functional team</b> to a 4.6-star customer rating.</li>
+        </ul>
+      </div>
+
+      <div class="job reveal">
+        <div class="date">May 2023 – Apr 2024</div>
+        <h3>Commercial Operations Associate</h3>
+        <div class="org">Wasabi Sushi and Bento · London, UK</div>
+        <ul>
+          <li>Managed business operations, operational planning, and inventory control across multi-unit operations.</li>
+          <li>Optimized inventory and supply coordination, <b>reducing operational waste by 15%</b>.</li>
+          <li>Implemented training initiatives improving <b>workforce retention by 40%</b> and service quality by 20%.</li>
+        </ul>
+      </div>
+
+      <div class="job reveal muted">
+        <div class="date">Jan 2021 – Dec 2022</div>
+        <h3>Business Development &amp; Sales Executive</h3>
+        <div class="org">Fourkay Industries · Vijayawada, India</div>
+        <ul>
+          <li>Delivered consistent <b>4–6% month-on-month sales growth</b> via distributor network expansion across South India.</li>
+          <li>Launched <b>6 new SKUs</b>, contributing an 18% increase in annual turnover.</li>
+          <li>Expanded distributor coverage 35%, establishing <b>50+ new channel partners</b>.</li>
+        </ul>
+      </div>
+
+      <div class="job reveal muted">
+        <div class="date">Jan 2020 – Dec 2021</div>
+        <h3>Business Development Associate</h3>
+        <div class="org">Fourkay Furniture · Vijayawada, India</div>
+        <ul>
+          <li>Expanded dealer and distribution network <b>40%</b> across South India.</li>
+          <li>Generated <b>₹45L+ incremental revenue</b> through new distribution partnerships.</li>
+          <li>Improved partner retention by 26% through stakeholder engagement.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section-alt">
+  <div class="wrap">
+    <div class="eyebrow reveal">Venture &amp; innovation</div>
+    <h2 class="sec reveal">Key projects</h2>
+    <div class="proj-grid">
+      <div class="proj reveal">
+        <div class="idx">01</div>
+        <h3>Barburrito Forecasting &amp; Growth Programme</h3>
+        <ul>
+          <li>Weekly forecasting and P&amp;L performance across 18 UK locations, built in Power BI.</li>
+          <li>£420K+ incremental GMV and 40% YoY revenue growth.</li>
+          <li>£95K annual procurement savings via supplier consolidation.</li>
+          <li>Flagship location grown from £1.1M to £1.38M annually.</li>
+        </ul>
+        <div class="ptags"><span>Forecasting</span><span>Power BI</span><span>P&amp;L</span></div>
+      </div>
+      <div class="proj reveal">
+        <div class="idx">02</div>
+        <h3>Onnuri Cloud Kitchen</h3>
+        <ul>
+          <li>Multi-brand delivery operation across Deliveroo, Uber Eats, Just Eat, FoodHub.</li>
+          <li>£180K+ GMV in year one with full £250K+ P&amp;L ownership.</li>
+          <li>22% procurement cost reduction; 32% gross-margin improvement.</li>
+          <li>12-person team built to a 4.6-star rating.</li>
+        </ul>
+        <div class="ptags"><span>P&amp;L Ownership</span><span>Operations</span><span>Scale-up</span></div>
+      </div>
+      <div class="proj reveal">
+        <div class="idx">03</div>
+        <h3>NutriLoop — AI Food Intelligence Platform</h3>
+        <ul>
+          <li>Co-founded an AI-enabled SaaS platform for nutrition intelligence and compliance.</li>
+          <li>Designed the business and product roadmap end to end.</li>
+          <li>Focused on automating compliance and reducing operational risk.</li>
+          <li>Led business strategy and market positioning.</li>
+        </ul>
+        <div class="ptags"><span>AI / SaaS</span><span>FoodTech</span><span>Co-founder</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="eyebrow reveal">Academic background</div>
+    <h2 class="sec reveal">Education</h2>
+    <div class="edu-grid">
+      <div class="edu reveal">
+        <div class="yr">2024</div>
+        <h3>MS — International Business Management</h3>
+        <p>University of East London · London, UK</p>
+      </div>
+      <div class="edu reveal">
+        <div class="yr">2021</div>
+        <h3>B.B.A — Administration &amp; General Management</h3>
+        <p>Krishna University · Machilipatnam, India</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="eyebrow reveal">Get in touch</div>
+    <h2 class="sec reveal">Let's connect</h2>
+    <p class="sec-intro reveal">Open to Sales Operations, Commercial Strategy, and Strategy &amp; Operations roles. If your team runs on forecasting and insight, I'd like to talk.</p>
+    <div class="contact-grid">
+      <a class="cc reveal" href="mailto:damarakapolisetty143@gmail.com"><div class="ck">Email</div><div class="cv">damarakapolisetty143@gmail.com</div></a>
+      <a class="cc reveal" href="tel:+917386045842"><div class="ck">Phone</div><div class="cv">+91 73860 45842</div></a>
+      <a class="cc reveal" href="https://www.linkedin.com/in/damaraka-polisetty" target="_blank" rel="noopener"><div class="ck">LinkedIn</div><div class="cv">in/damaraka-polisetty</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Damaraka Polisetty · Sales Operations · Commercial Strategy · Forecasting · Business Insights</div>
+</footer>
+
+<script>
+  // mobile nav toggle
+  var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
+  if(t){t.addEventListener('click',function(){
+    var open=l.style.display==='flex';
+    l.style.display=open?'none':'flex';
+    if(!open){l.style.position='absolute';l.style.flexDirection='column';l.style.background='var(--paper)';l.style.right='28px';l.style.top='62px';l.style.padding='16px 20px';l.style.border='1px solid var(--line)';l.style.borderRadius='10px';l.style.gap='14px';}
+  });}
+  // scroll reveal
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    els.forEach(function(e){io.observe(e);});
+  }else{els.forEach(function(e){e.classList.add('in');});}
+</script>
+</body>
+</html>
